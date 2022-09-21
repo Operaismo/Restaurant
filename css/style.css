@@ -20,17 +20,79 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
-
-body {
-
+:root {
+  --font: 'Roboto', Arial, Helvetica, sans-serif;
+  --main-grey: rgb(223, 232, 238);
+  --main-lightgrey: rgb(245, 249, 252);
+  --main-darkgrey: rgb(49, 70, 88);
+  --main-white: rgb(255, 255, 255);
 }
 
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+li,
+nav a {
+  list-style: none;
+}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
 
+/* Header */
+header {
+  background: linear-gradient( rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35) ), url('../img/korean-food-wallpaper-transformed.jpeg') no-repeat center;
+  background-size: cover;
+  color: rgb(16, 42, 147);
+  font-weight: bold;
+}
+
+nav, ul, header section, .landing {
+  display: flex;
+}
+
+nav, ul, .landing-input {
+  justify-content: space-around;
+}
+
+.landing {
+  align-content: center;
+}
+
+ul {
+  flex-basis: 80%;
+}
+
+.landing-input {
+  flex-direction: column;
+  margin-left: 25%;
+  font-size: 1em;
+}
+
+.landing-form, .landing i{
+  flex-direction: row;
+}
+
+.landing-title, .landing-form, .landing-socials {
+  padding: 1em 1em;
+}
+
+.landing {
+  justify-content: flex-start;
+}
+
+.landing i {
+  padding-right: 3em;
 }
 
 footer {
