@@ -5,16 +5,16 @@
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 /******************************************
@@ -45,28 +45,35 @@ nav a {
   list-style: none;
 }
 
+nav,
+ul,
+header section,
+.landing, .story {
+  display: flex;
+}
+
 /******************************************
 /* LAYOUT
 /*******************************************/
 
 /* Header */
-header {
-  background: linear-gradient( rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35) ), url('../img/korean-food-wallpaper-transformed.jpeg') no-repeat center;
+.landing {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url('../img/korean\ food\ wallpaper.jpg') no-repeat center;
   background-size: cover;
-  color: rgb(16, 42, 147);
+  color: white;
   font-weight: bold;
 }
 
-nav, ul, header section, .landing {
-  display: flex;
-}
 
-nav, ul, .landing-input {
+
+nav,
+ul,
+.landing-input {
   justify-content: space-around;
-}
-
-.landing {
-  align-content: center;
 }
 
 ul {
@@ -75,29 +82,39 @@ ul {
 
 .landing-input {
   flex-direction: column;
-  margin-left: 25%;
+  align-content: space-around;
   font-size: 1em;
 }
 
-.landing-form, .landing i{
+.landing-form,
+.landing i {
   flex-direction: row;
 }
 
-.landing-title, .landing-form, .landing-socials {
+.landing-title,
+.landing-form,
+.landing-socials {
   padding: 1em 1em;
 }
 
 .landing {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .landing i {
   padding-right: 3em;
 }
 
-footer {
-
+/* Main 1: Our Story */
+.story {
+  flex-basis: 75%;
+  justify-content: center;
+  flex-direction: column;
 }
+
+/* footer {
+
+} */
 
 /******************************************
 /* ADDITIONAL STYLES
